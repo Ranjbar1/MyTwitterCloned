@@ -1,0 +1,32 @@
+.sidebarOption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.sidebarOption:hover {
+  background-color: #e8f5fe;
+  border-radius: 30px;
+  color: var(--twitter-color);
+  -webkit-transition: color 100ms ease-out;
+  transition: color 100ms ease-out;
+}
+
+.sidebarOption .MuiSvgIcon-root {
+  padding: 20px;
+}
+
+.sidebarOption h2 {
+  font-weight: 800;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.sidebarOption--active {
+  color: var(--twitter-color);
+}
+/*# sourceMappingURL=SidebarOption.css.map */
