@@ -1,4 +1,4 @@
-.tweetBox {
+.tweetCard {
   padding-bottom: 10px;
   border-bottom: 8px solid var(--twitter-background);
   padding-right: 10px;
@@ -8,6 +8,8 @@
   }
   &__imageInput {
     border: none;
+    outline: none;
+
     padding: 10px;
   }
   &__input {

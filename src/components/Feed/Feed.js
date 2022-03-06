@@ -30,12 +30,14 @@ const react_1 = __importStar(require("react"));
 const TweetCard_1 = __importDefault(require("../TweetCard/TweetCard"));
 const Post_1 = __importDefault(require("../Post/Post"));
 require("./Feed.css");
-function Feed() {
-    const [posts, setPosts] = (0, react_1.useState)([]);
+const fakePosts_1 = require("../../fakePosts");
+const Feed = (props) => {
+    let allPosts = (0, fakePosts_1.getPosts)();
+    const [posts, setPosts] = (0, react_1.useState)(allPosts);
     return (react_1.default.createElement("div", { className: "feed" },
         react_1.default.createElement("div", { className: "feed__header" },
             react_1.default.createElement("h2", null, "Home")),
-        react_1.default.createElement(TweetCard_1.default, null),
+        react_1.default.createElement(TweetCard_1.default, { sendTweet: (e) => setPosts((0, fakePosts_1.savePost)(e)) }),
         posts.map((post) => (react_1.default.createElement(Post_1.default, { key: post.text, displayName: post.displayName, username: post.username, verified: post.verified, text: post.text, avatar: post.avatar, image: post.image })))));
-}
+};
 exports.default = Feed;

@@ -29,13 +29,6 @@ const core_1 = require("@material-ui/core");
 function TweetCard() {
     const [tweetMessage, setTweetMessage] = (0, react_1.useState)("");
     const [tweetImage, setTweetImage] = (0, react_1.useState)("");
-    const [post, setPost] = (0, react_1.useState)({
-        displayName: "abolfazl naser ranjbar",
-        username: "Abolfazl",
-        verified: true,
-        text: tweetMessage,
-        image: tweetImage,
-    });
     const sendTweet = (e) => {
         e.preventDefault();
         setTweetMessage("");

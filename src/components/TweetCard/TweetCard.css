@@ -1,10 +1,10 @@
-.tweetBox {
+.tweetCard {
   padding-bottom: 10px;
   border-bottom: 8px solid var(--twitter-background);
   padding-right: 10px;
 }
 
-.tweetBox form {
+.tweetCard form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,19 +14,20 @@
           flex-direction: column;
 }
 
-.tweetBox__imageInput {
+.tweetCard__imageInput {
   border: none;
+  outline: none;
   padding: 10px;
 }
 
-.tweetBox__input {
+.tweetCard__input {
   padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.tweetBox__input input {
+.tweetCard__input input {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -35,7 +36,7 @@
   border: none;
 }
 
-.tweetBox__tweetButton {
+.tweetCard__tweetButton {
   background-color: var(--twitter-color) !important;
   border: none !important;
   color: white !important;

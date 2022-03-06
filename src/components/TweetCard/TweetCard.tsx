@@ -2,21 +2,15 @@ import React, { useState } from "react";
 import "./TweetCard.css";
 import { Avatar, Button } from "@material-ui/core";
 
-function TweetCard() {
+export default function TweetCard() {
   const [tweetMessage, setTweetMessage] = useState("");
   const [tweetImage, setTweetImage] = useState("");
-  const [post, setPost] = useState({
-    displayName: "abolfazl naser ranjbar",
-    username: "Abolfazl",
-    verified: true,
-    text: tweetMessage,
-    image: tweetImage,
-  });
+ 
   const sendTweet = (e) => {
     e.preventDefault();
-
     setTweetMessage("");
     setTweetImage("");
+   
   };
 
   return (
@@ -50,5 +44,3 @@ function TweetCard() {
     </div>
   );
 }
-
-export default TweetCard;

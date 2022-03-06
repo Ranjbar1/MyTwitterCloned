@@ -1,7 +1,7 @@
 .widgets {
   -webkit-box-flex: 0.3;
-  -ms-flex: 0.3;
-  flex: 0.3;
+      -ms-flex: 0.3;
+          flex: 0.3;
 }
 
 .widgets__input {
@@ -9,8 +9,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: var(--twitter-background);
   padding: 10px;
   border-radius: 20px;

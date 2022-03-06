@@ -4,18 +4,28 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importDefault(require("react"));
-require("./Widget.css");
-const react_twitter_embed_1 = require("react-twitter-embed");
+require("./Widgets.css");
 const Search_1 = __importDefault(require("@material-ui/icons/Search"));
-function Widgets() {
-    return (react_1.default.createElement("div", { className: "widgets" },
-        react_1.default.createElement("div", { className: "widgets__input" },
-            react_1.default.createElement(Search_1.default, { className: "widgets__searchIcon" }),
-            react_1.default.createElement("input", { placeholder: "Search Twitter", type: "text" })),
-        react_1.default.createElement("div", { className: "widgets__widgetContainer" },
-            react_1.default.createElement("h2", null, "What's happening"),
-            react_1.default.createElement(react_twitter_embed_1.TwitterTweetEmbed, { tweetId: "858551177860055040" }),
-            react_1.default.createElement(react_twitter_embed_1.TwitterTimelineEmbed, { sourceType: "profile", screenName: "cleverqazi", options: { height: 400 } }),
-            react_1.default.createElement(react_twitter_embed_1.TwitterShareButton, { url: "https://facebook.com/cleverprogrammer", options: { text: "#reactjs is awesome", via: "cleverqazi" } }))));
+class Widgets extends react_1.default.Component {
+    constructor() {
+        super(...arguments);
+        this.state = { searchedTerm: "" };
+        this.onFormSubmit = (e) => {
+            e.preventDefault();
+            console.log(this.state.searchedTerm);
+            return this.props.onSubmitSearch(this.state.searchedTerm);
+        };
+    }
+    render() {
+        return (react_1.default.createElement("div", { className: "widgets" },
+            react_1.default.createElement("form", { onSubmit: this.onFormSubmit },
+                react_1.default.createElement("div", { className: "widgets__input" },
+                    react_1.default.createElement(Search_1.default, { className: "widgets__searchIcon" }),
+                    react_1.default.createElement("input", { placeholder: "Search Twitter", type: "text", value: this.state.searchedTerm, onChange: (e) => {
+                            this.setState({ searchedTerm: e.target.value });
+                        } }))),
+            react_1.default.createElement("div", { className: "widgets__widgetContainer" },
+                react_1.default.createElement("h2", null, "What's happening"))));
+    }
 }
 exports.default = Widgets;
