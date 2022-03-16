@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import React,{forwardRef} from "react";
 import "./Post.css";
 import { Avatar } from "@material-ui/core";
 import VerifiedUserIcon from "@material-ui/icons/VerifiedUser";
@@ -6,6 +6,11 @@ import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 import RepeatIcon from "@material-ui/icons/Repeat";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import PublishIcon from "@material-ui/icons/Publish";
+
+interface PostProps {
+  displayName:any, username:string, verified:boolean, text:string, image:string,avatar:any
+}
+
 
 const Post = forwardRef(
   ({ displayName, username, verified, text, image,avatar}, ref) => {

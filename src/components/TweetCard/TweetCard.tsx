@@ -6,7 +6,7 @@ import  "./TweetCard.css";
 export default function TweetCard() {
   const [tweetMessage, setTweetMessage] = useState("");
   const [tweetImage, setTweetImage] = useState("");
- 
+ const [posts,setPosts]=useState(Posts)
   
   const sendTweet = (e:any) => {
     e.preventDefault();
@@ -21,7 +21,8 @@ export default function TweetCard() {
     console.log("send tweet", Posts)
     setTweetMessage("");
     setTweetImage("");
-   
+    setPosts(Posts)
+   return posts
   };
 
   return (
@@ -44,7 +45,7 @@ export default function TweetCard() {
           type="text"
         />
 
-        <Button
+        <Button 
           onClick={sendTweet}
           type="submit"
           className="TweetCard__tweetButton"

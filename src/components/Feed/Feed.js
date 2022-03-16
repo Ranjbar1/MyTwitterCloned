@@ -35,12 +35,15 @@ const Feed = () => {
     let allPosts = fakePosts_d_1.Posts;
     const [posts, setPosts] = (0, react_1.useState)(allPosts);
     (0, react_1.useEffect)(() => {
-        setPosts(fakePosts_d_1.Posts);
-    }, posts);
+        setTimeout(() => {
+            setPosts([...fakePosts_d_1.Posts]);
+        }, 5000);
+        console.log(fakePosts_d_1.Posts, "feeds post");
+    }, [posts]);
     return (react_1.default.createElement("div", { className: "feed" },
         react_1.default.createElement("div", { className: "feed__header" },
             react_1.default.createElement("h2", null, "Home")),
-        react_1.default.createElement(TweetCard_1.default, { sendTweet: (e) => setPosts((0, fakePosts_d_1.savePost)(e)) }),
+        react_1.default.createElement(TweetCard_1.default, null),
         posts.map((post) => (react_1.default.createElement(Post_1.default, { key: post.text, displayName: post.displayName, username: post.username, verified: post.verified, text: post.text, avatar: post.avatar, image: post.image })))));
 };
 exports.default = Feed;

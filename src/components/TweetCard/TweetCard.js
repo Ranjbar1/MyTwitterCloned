@@ -30,6 +30,7 @@ require("./TweetCard.css");
 function TweetCard() {
     const [tweetMessage, setTweetMessage] = (0, react_1.useState)("");
     const [tweetImage, setTweetImage] = (0, react_1.useState)("");
+    const [posts, setPosts] = (0, react_1.useState)(fakePosts_d_1.Posts);
     const sendTweet = (e) => {
         e.preventDefault();
         fakePosts_d_1.Posts.push({
@@ -42,6 +43,8 @@ function TweetCard() {
         console.log("send tweet", fakePosts_d_1.Posts);
         setTweetMessage("");
         setTweetImage("");
+        setPosts(fakePosts_d_1.Posts);
+        return posts;
     };
     return (react_1.default.createElement("div", { className: "tweetCard" },
         react_1.default.createElement("form", null,
