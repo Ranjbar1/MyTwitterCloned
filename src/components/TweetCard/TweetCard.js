@@ -24,13 +24,22 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importStar(require("react"));
-require("./TweetCard.css");
 const core_1 = require("@material-ui/core");
+const fakePosts_d_1 = require("../../fakePosts.d");
+require("./TweetCard.css");
 function TweetCard() {
     const [tweetMessage, setTweetMessage] = (0, react_1.useState)("");
     const [tweetImage, setTweetImage] = (0, react_1.useState)("");
     const sendTweet = (e) => {
         e.preventDefault();
+        fakePosts_d_1.Posts.push({
+            displayName: "abolfazl",
+            username: "abolfazl-legion",
+            verified: true,
+            text: tweetMessage,
+            image: tweetImage
+        });
+        console.log("send tweet", fakePosts_d_1.Posts);
         setTweetMessage("");
         setTweetImage("");
     };

@@ -1,13 +1,24 @@
 import React, { useState } from "react";
-import "./TweetCard.css";
 import { Avatar, Button } from "@material-ui/core";
+import {Posts} from "../../fakePosts.d";
+import  "./TweetCard.css";
 
 export default function TweetCard() {
   const [tweetMessage, setTweetMessage] = useState("");
   const [tweetImage, setTweetImage] = useState("");
  
-  const sendTweet = (e) => {
+  
+  const sendTweet = (e:any) => {
     e.preventDefault();
+    Posts.push({
+      displayName:"abolfazl",
+      username:"abolfazl-legion",
+      verified:true,
+      text:tweetMessage,
+      image:tweetImage
+    })
+    
+    console.log("send tweet", Posts)
     setTweetMessage("");
     setTweetImage("");
    

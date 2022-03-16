@@ -16,14 +16,16 @@ class Widgets extends react_1.default.Component {
             return this.props.onSubmitSearch(this.state.searchedTerm);
         };
     }
+    //  handleSearch=({currentTarget:name})=>{
+    //    const term =[...this.state.searchedTerm]
+    //    term =
+    // }
     render() {
         return (react_1.default.createElement("div", { className: "widgets" },
             react_1.default.createElement("form", { onSubmit: this.onFormSubmit },
                 react_1.default.createElement("div", { className: "widgets__input" },
                     react_1.default.createElement(Search_1.default, { className: "widgets__searchIcon" }),
-                    react_1.default.createElement("input", { placeholder: "Search Twitter", type: "text", value: this.state.searchedTerm, onChange: (e) => {
-                            this.setState({ searchedTerm: e.target.value });
-                        } }))),
+                    react_1.default.createElement("input", { name: "searchedTerm", placeholder: "Search Twitter", type: "text", value: this.state.searchedTerm, onChange: this.handleSearch }))),
             react_1.default.createElement("div", { className: "widgets__widgetContainer" },
                 react_1.default.createElement("h2", null, "What's happening"))));
     }

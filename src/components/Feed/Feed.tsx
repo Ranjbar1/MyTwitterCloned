@@ -2,16 +2,18 @@ import React, { useState } from "react";
 import TweetCard from "../TweetCard/TweetCard";
 import Post from "../Post/Post";
 import "./Feed.css";
-import {getPosts, getPost,savePost} from "../../fakePosts";
+import {getPosts,savePost ,Posts} from "../../fakePosts.d";
 
 
-const  Feed=(props)=> {
-let allPosts = getPosts()
+const  Feed=()=> {
+let allPosts = Posts
 
 
 
 
       const [posts, setPosts] = useState(allPosts);
+      
+
       
       return (
         <div className="feed">
@@ -19,7 +21,7 @@ let allPosts = getPosts()
             <h2>Home</h2>
           </div>
 
-        <TweetCard sendTweet={(e)=>setPosts(savePost(e))}></TweetCard>
+        <TweetCard sendTweet ={(e:any)=>setPosts(savePost(e))}></TweetCard>
 
           
             {posts.map((post) => (

@@ -15,6 +15,12 @@ class Widgets extends React.Component<WidgetsProps, WidgetsState> {
     console.log(this.state.searchedTerm);
     return this.props.onSubmitSearch(this.state.searchedTerm);
   };
+//  handleSearch=({currentTarget:name})=>{
+//    const term =[...this.state.searchedTerm]
+//    term =
+
+// }
+    
   render() {
     return (
       <div className="widgets">
@@ -22,12 +28,12 @@ class Widgets extends React.Component<WidgetsProps, WidgetsState> {
           <div className="widgets__input">
             <SearchIcon className="widgets__searchIcon" />
             <input
+
+            name="searchedTerm"
               placeholder="Search Twitter"
               type="text"
               value={this.state.searchedTerm}
-              onChange={(e) => {
-                this.setState({ searchedTerm: e.target.value });
-              }}
+              onChange={this.handleSearch}
             />
           </div>
         </form>
