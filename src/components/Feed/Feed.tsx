@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import TweetCard from "../TweetCard/TweetCard";
 import Post from "../Post/Post";
 import "./Feed.css";
@@ -13,7 +13,10 @@ let allPosts = Posts
 
       const [posts, setPosts] = useState(allPosts);
       
-
+useEffect(()=>{
+  setPosts(Posts)
+  
+},posts)
       
       return (
         <div className="feed">

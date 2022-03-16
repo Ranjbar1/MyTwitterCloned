@@ -34,6 +34,9 @@ const fakePosts_d_1 = require("../../fakePosts.d");
 const Feed = () => {
     let allPosts = fakePosts_d_1.Posts;
     const [posts, setPosts] = (0, react_1.useState)(allPosts);
+    (0, react_1.useEffect)(() => {
+        setPosts(fakePosts_d_1.Posts);
+    }, posts);
     return (react_1.default.createElement("div", { className: "feed" },
         react_1.default.createElement("div", { className: "feed__header" },
             react_1.default.createElement("h2", null, "Home")),
