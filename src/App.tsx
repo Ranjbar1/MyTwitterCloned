@@ -20,7 +20,7 @@ class App extends React.Component {
           <SideBar />
           <Feed  />
           {/* <Feed searchedTerm={this.onHandleSearch()} /> */}
-          <Widgets onSubmitSearch={this.onHandleSearch} />
+          <Widgets />
         </div>
       </React.Fragment>)
   }

@@ -44,6 +44,6 @@ const Feed = () => {
         react_1.default.createElement("div", { className: "feed__header" },
             react_1.default.createElement("h2", null, "Home")),
         react_1.default.createElement(TweetCard_1.default, null),
-        posts.map((post) => (react_1.default.createElement(Post_1.default, { key: post.text, displayName: post.displayName, username: post.username, verified: post.verified, text: post.text, avatar: post.avatar, image: post.image })))));
+        posts.map((post) => (react_1.default.createElement(Post_1.default, { key: post.text, displayName: post.displayName, username: post.username, verified: post.verified, text: post.text, image: post.image, avatar: post.avatar })))));
 };
 exports.default = Feed;

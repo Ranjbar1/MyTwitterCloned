@@ -25,7 +25,7 @@ class App extends react_1.default.Component {
             react_1.default.createElement("div", { className: "app" },
                 react_1.default.createElement(SideBar_1.default, null),
                 react_1.default.createElement(Feed_1.default, null),
-                react_1.default.createElement(Widget_1.default, { onSubmitSearch: this.onHandleSearch }))));
+                react_1.default.createElement(Widget_1.default, null))));
     }
 }
 exports.default = App;

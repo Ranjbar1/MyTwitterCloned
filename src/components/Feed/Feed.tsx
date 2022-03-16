@@ -32,8 +32,8 @@ const Feed = () => {
           username={post.username}
           verified={post.verified}
           text={post.text}
-          avatar={post.avatar}
           image={post.image}
+          avatar={post.avatar}
         />
       ))}
     </div>

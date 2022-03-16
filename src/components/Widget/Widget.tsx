@@ -33,7 +33,7 @@ class Widgets extends React.Component<WidgetsProps, WidgetsState> {
               placeholder="Search Twitter"
               type="text"
               value={this.state.searchedTerm}
-              onChange={this.handleSearch}
+              // onChange={this.handleSearch}
             />
           </div>
         </form>
