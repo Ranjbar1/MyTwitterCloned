@@ -49,7 +49,7 @@ function TweetCard() {
     return (react_1.default.createElement("div", { className: "tweetCard" },
         react_1.default.createElement("form", null,
             react_1.default.createElement("div", { className: "tweetCard__input" },
-                react_1.default.createElement(core_1.Avatar, { src: "https://kajabi-storefronts-production.global.ssl.fastly.net/kajabi-storefronts-production/themes/284832/settings_images/rLlCifhXRJiT0RoN2FjK_Logo_roundbackground_black.png" }),
+                react_1.default.createElement(core_1.Avatar, { src: "../../../../public/icons8_administrator_male_100px.png" }),
                 react_1.default.createElement("input", { onChange: (e) => setTweetMessage(e.target.value), value: tweetMessage, placeholder: "What's happening?", type: "text" })),
             react_1.default.createElement("input", { value: tweetImage, onChange: (e) => setTweetImage(e.target.value), className: "TweetCard__imageInput", placeholder: "Optional: Enter image URL", type: "text" }),
             react_1.default.createElement(core_1.Button, { onClick: sendTweet, type: "submit", className: "TweetCard__tweetButton" }, "Tweet"))));
